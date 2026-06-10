@@ -25,12 +25,18 @@ def compare():
     merge_result = merge_sort(numbers)
     merge_time = time.perf_counter() - start
 
+    winner = "Bubble Sort"
+
+    if merge_time < bubble_time:
+        winner = "Merge Sort"
+
     return jsonify({
         "sorted": merge_result,
         "bubble_time": bubble_time,
         "merge_time": merge_time,
         "bubble_complexity": "O(n²)",
-        "merge_complexity": "O(n log n)"
+        "merge_complexity": "O(n log n)",
+        "winner": winner
     })
 
 

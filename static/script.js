@@ -52,6 +52,9 @@ async function compareSorts() {
 
         <p><strong>Merge Sort Complexity:</strong>
         ${data.merge_complexity}</p>
+
+        <p><strong>Faster Algorithm:</strong>
+        ${data.winner}</p>
     `;
 
     const ctx = document.getElementById("timeChart");
