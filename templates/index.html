@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sorting Algorithm Comparison</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Bubble Sort vs Merge Sort</h1>
+
+    <p>Enter numbers separated by commas</p>
+
+    <input
+        type="text"
+        id="numbers"
+        placeholder="5,3,8,1,9">
+
+    <br>
+
+    <button onclick="compareSorts()">
+        Compare Algorithms
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
