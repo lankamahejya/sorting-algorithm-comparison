@@ -47,13 +47,19 @@ async function compareSorts() {
         <p><strong>Merge Sort Time:</strong>
         ${data.merge_time.toFixed(8)} seconds</p>
 
+        <p><strong>Quick Sort Time:</strong>
+        ${data.quick_time.toFixed(8)} seconds</p>
+
         <p><strong>Bubble Sort Complexity:</strong>
         ${data.bubble_complexity}</p>
 
         <p><strong>Merge Sort Complexity:</strong>
         ${data.merge_complexity}</p>
 
-        <p><strong>Faster Algorithm:</strong>
+        <p><strong>Quick Sort Complexity:</strong>
+        ${data.quick_complexity}</p>
+
+        <p><strong>Fastest Algorithm:</strong>
         ${data.winner}</p>
     `;
 
@@ -67,14 +73,19 @@ async function compareSorts() {
         type: "bar",
 
         data: {
-            labels: ["Bubble Sort", "Merge Sort"],
+            labels: [
+                "Bubble Sort",
+                "Merge Sort",
+                "Quick Sort"
+            ],
 
             datasets: [{
                 label: "Execution Time (seconds)",
 
                 data: [
                     data.bubble_time,
-                    data.merge_time
+                    data.merge_time,
+                    data.quick_time
                 ]
             }]
         },

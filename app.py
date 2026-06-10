@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from algorithms import bubble_sort, merge_sort
+from algorithms import bubble_sort, merge_sort, quick_sort
 import time
 
 app = Flask(__name__)
@@ -17,25 +17,37 @@ def compare():
 
     numbers = data["numbers"]
 
+    # Bubble Sort
     start = time.perf_counter()
     bubble_result = bubble_sort(numbers)
     bubble_time = time.perf_counter() - start
 
+    # Merge Sort
     start = time.perf_counter()
     merge_result = merge_sort(numbers)
     merge_time = time.perf_counter() - start
 
-    winner = "Bubble Sort"
+    # Quick Sort
+    start = time.perf_counter()
+    quick_result = quick_sort(numbers)
+    quick_time = time.perf_counter() - start
 
-    if merge_time < bubble_time:
-        winner = "Merge Sort"
+    times = {
+        "Bubble Sort": bubble_time,
+        "Merge Sort": merge_time,
+        "Quick Sort": quick_time
+    }
+
+    winner = min(times, key=times.get)
 
     return jsonify({
-        "sorted": merge_result,
+        "sorted": quick_result,
         "bubble_time": bubble_time,
         "merge_time": merge_time,
+        "quick_time": quick_time,
         "bubble_complexity": "O(n²)",
         "merge_complexity": "O(n log n)",
+        "quick_complexity": "O(n log n)",
         "winner": winner
     })
 
