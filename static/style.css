@@ -53,3 +53,7 @@ button:hover{
     border-radius: 8px;
     text-align: left;
 }
+
+canvas{
+    margin-top: 20px;
+}
