@@ -2,10 +2,21 @@ async function compareSorts() {
 
     let input = document.getElementById("numbers").value;
 
-    let numbers = input
-        .split(",")
-        .map(num => Number(num.trim()));
+    let values = input.split(",");
 
+let numbers = [];
+
+for(let value of values){
+
+    value = value.trim();
+
+    if(value === "" || isNaN(value)){
+        alert("Please enter valid numbers separated by commas.");
+        return;
+    }
+
+    numbers.push(Number(value));
+}
     const response = await fetch("/compare", {
         method: "POST",
         headers: {
