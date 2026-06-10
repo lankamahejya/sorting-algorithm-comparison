@@ -1,83 +1,97 @@
 body{
-    font-family: Arial, sans-serif;
-    background: #f4f6f9;
-    margin: 0;
-    padding: 0;
+    margin:0;
+    padding:0;
+    font-family:'Segoe UI',sans-serif;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:white;
 }
 
 .container{
-    width: 800px;
-    margin: 50px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    text-align: center;
+    width:85%;
+    max-width:1000px;
+    margin:40px auto;
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 0 25px rgba(0,0,0,0.4);
 }
 
 h1{
-    color: #2c3e50;
+    text-align:center;
+    font-size:2.5rem;
+    color:#38bdf8;
 }
 
 h2{
-    margin-top: 30px;
+    color:#38bdf8;
 }
 
 input{
-    width: 90%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
-
-button{
-    background-color: #3498db;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-button:hover{
-    background-color: #2980b9;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#334155;
+    color:white;
+    font-size:15px;
 }
 
 select{
-    padding: 10px;
-    border-radius: 6px;
+    padding:10px;
+    border:none;
+    border-radius:10px;
+    background:#334155;
+    color:white;
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:#38bdf8;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    margin:5px;
+    transition:0.3s;
+}
+
+button:hover{
+    transform:scale(1.05);
 }
 
 #result{
-    margin-top: 20px;
-    padding: 15px;
-    background: #f8f9fa;
-    border-radius: 8px;
-    text-align: left;
+    margin-top:25px;
+    background:#334155;
+    padding:20px;
+    border-radius:15px;
 }
 
 canvas{
-    margin-top: 20px;
+    margin-top:20px;
+    background:white;
+    border-radius:15px;
+    padding:10px;
 }
 
 table{
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td{
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+    width:100%;
+    margin-top:20px;
+    border-collapse:collapse;
 }
 
 th{
-    background-color: #3498db;
-    color: white;
+    background:#38bdf8;
+    color:black;
+    padding:12px;
 }
 
-tr:nth-child(even){
-    background-color: #f9f9f9;
+td{
+    background:#334155;
+    padding:12px;
+}
+
+th,td{
+    border:1px solid #475569;
+    text-align:center;
 }

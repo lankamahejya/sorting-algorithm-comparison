@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sorting Algorithm Comparison</title>
+    <title>Sorting Algorithm Analyzer</title>
 
     <link rel="stylesheet"
           href="{{ url_for('static', filename='style.css') }}">
@@ -11,11 +11,14 @@
 
 <div class="container">
 
-    <h1>Sorting Algorithm Comparison</h1>
+    <h1>⚡ Sorting Algorithm Analyzer</h1>
 
-    <p>Compare Bubble Sort, Merge Sort and Quick Sort</p>
+    <p>
+        Analyze and compare Bubble Sort, Merge Sort and Quick Sort
+        performance in real time.
+    </p>
 
-    <h3>Generate Random Dataset</h3>
+    <h2>📊 Generate Random Dataset</h2>
 
     <select id="datasetSize">
         <option value="100">100 Elements</option>
@@ -30,10 +33,12 @@
 
     <br><br>
 
+    <h2>📝 Input Dataset</h2>
+
     <input
         type="text"
         id="numbers"
-        placeholder="5,3,8,1,9">
+        placeholder="Enter numbers separated by commas">
 
     <br><br>
 
@@ -43,11 +48,9 @@
 
     <div id="result"></div>
 
-    <br>
-
     <canvas id="timeChart"></canvas>
 
-    <h2>Algorithm Complexity Comparison</h2>
+    <h2>📚 Algorithm Complexity Comparison</h2>
 
     <table>
         <tr>
@@ -82,6 +85,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
