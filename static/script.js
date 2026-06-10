@@ -1,5 +1,21 @@
 let chart;
+function generateDataset(){
 
+    let size =
+        parseInt(document.getElementById("datasetSize").value);
+
+    let numbers = [];
+
+    for(let i = 0; i < size; i++){
+
+        numbers.push(
+            Math.floor(Math.random() * 10000)
+        );
+    }
+
+    document.getElementById("numbers").value =
+        numbers.join(",");
+}
 async function compareSorts() {
 
     let input = document.getElementById("numbers").value;

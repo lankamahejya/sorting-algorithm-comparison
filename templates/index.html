@@ -15,6 +15,21 @@
 
     <p>Compare Bubble Sort, Merge Sort and Quick Sort</p>
 
+    <h3>Generate Random Dataset</h3>
+
+    <select id="datasetSize">
+        <option value="100">100 Elements</option>
+        <option value="500">500 Elements</option>
+        <option value="1000">1000 Elements</option>
+        <option value="5000">5000 Elements</option>
+    </select>
+
+    <button onclick="generateDataset()">
+        Generate Dataset
+    </button>
+
+    <br><br>
+
     <input
         type="text"
         id="numbers"
@@ -67,7 +82,6 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
 <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
